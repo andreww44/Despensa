@@ -25,9 +25,9 @@ class DetalleProductoActivity : AppCompatActivity() {
 
 
         if (Build.VERSION.SDK_INT >= 33){ // TIRAMISU
-            product = intent.getParcelableExtra("producto",Producto::class.java) ?: Producto("", "", "")
+            product = intent.getParcelableExtra("producto",Producto::class.java) ?: Producto("", "", "", "","")
         }else{
-            product = intent.getParcelableExtra("producto") ?: Producto("", "", "")
+            product = intent.getParcelableExtra("producto") ?: Producto("", "", "","","")
         }
 
 

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Despensa"
         tools:targetApi="31">
         <activity
+            android:name=".DespensaCasaActivity"
+            android:exported="false" />
+        <activity
             android:name=".adapters.MiPerfilActivity"
             android:exported="false" />
         <activity

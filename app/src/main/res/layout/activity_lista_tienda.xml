@@ -11,17 +11,18 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/card1"
-            layout="@layout/tienda_view"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
 
-        <include
-            android:id="@+id/card2"
-            layout="@layout/tienda_view"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/tiendas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
 
 
     </LinearLayout>

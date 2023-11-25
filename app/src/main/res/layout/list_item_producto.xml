@@ -14,21 +14,38 @@
         <TextView
             android:id="@+id/Nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:text="Nombre: "
-            android:textSize="18sp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Tienda"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tienda: " />
+            android:layout_height="41dp"
+            android:text="Tienda: "
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/Precio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Precio: " />
+            android:layout_height="45dp"
+            android:text="Precio: "
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cantidad"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="TextView"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/categoria"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="Categoria"
+            android:textSize="20sp" />
 
     </LinearLayout>
 

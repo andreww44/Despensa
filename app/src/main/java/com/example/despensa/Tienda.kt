@@ -5,12 +5,14 @@ import android.os.Parcelable
 
 class Tienda (
     val nombre: String?,
-    val ubicacion: String?
+    val ubicacion: String?,
+    val imagenResId: Int
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
-        parcel.readString()
+        parcel.readString(),
+        parcel.readInt()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {

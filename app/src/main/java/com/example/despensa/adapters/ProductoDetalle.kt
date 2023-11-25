@@ -21,11 +21,15 @@ class ProductoDetalle (
 
         val textViewName = findViewById<TextView>(R.id.Nombre)
         val textViewEmail = findViewById<TextView>(R.id.Precio)
-        val textViewRoom = findViewById<TextView>(R.id.Precio)
+        val textViewRoom = findViewById<TextView>(R.id.Tienda)
+        val textViewcant = findViewById<TextView>(R.id.cantidad)
+        val textViewcat = findViewById<TextView>(R.id.categoria)
 
         textViewName.text = producto.nombre
         textViewEmail.text = producto.tienda
         textViewRoom.text = producto.precio
+        textViewcant.text = producto.cantidad
+        textViewcat.text = producto.cantegoria
 
 
     }

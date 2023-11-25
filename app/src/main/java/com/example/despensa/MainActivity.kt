@@ -31,11 +31,11 @@ class MainActivity : AppCompatActivity() {
                                 startActivity(intent);
                                 return true;
             }
-            R.id.id_lista->{  val intent = Intent(this, ListaTienda::class.java)
+            R.id.id_lista->{  val intent = Intent(this, ListaDespensa::class.java)
                 startActivity(intent);
                 return true;
             }
-            R.id.id_invetario-> {  val intent = Intent(this, ListaTienda::class.java)
+            R.id.id_despensa-> {  val intent = Intent(this, DespensaCasaActivity::class.java)
                 startActivity(intent);
                 return true;
             }

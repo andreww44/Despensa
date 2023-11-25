@@ -8,8 +8,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="415dp"
-        android:layout_height="163dp"
+        android:layout_width="412dp"
+        android:layout_height="179dp"
         android:orientation="vertical"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,22 +19,24 @@
         <TextView
             android:id="@+id/Nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="49dp"
             android:text="Nombre"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Tienda"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Tienda" />
+            android:layout_height="50dp"
+            android:text="Tienda"
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/Precio"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Precio" />
+            android:layout_height="48dp"
+            android:text="Precio"
+            android:textSize="16sp" />
 
 
     </LinearLayout>

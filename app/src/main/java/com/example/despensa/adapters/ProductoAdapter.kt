@@ -25,13 +25,17 @@ class ProductoListAdapter(
         // Bind patient data to TextViews in the custom layout
         val nameTextView = listItemView.findViewById<TextView>(R.id.Nombre)
         val precioTextView = listItemView.findViewById<TextView>(R.id.Precio)
-        val tiendaTextView = listItemView.findViewById<TextView>(R.id.Precio)
+        val tiendaTextView = listItemView.findViewById<TextView>(R.id.Tienda)
+        val cantidadTextView = listItemView.findViewById<TextView>(R.id.cantidad)
+        val catTextView = listItemView.findViewById<TextView>(R.id.categoria)
 
 
         // Set the patient data in the TextViews
         nameTextView.text = producto?.nombre
         precioTextView.text = producto?.tienda
         tiendaTextView.text = producto?.precio
+        cantidadTextView.text = producto?.cantidad
+        catTextView.text = producto?.cantegoria
 
         return listItemView
     }
