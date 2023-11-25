@@ -7,6 +7,7 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -27,10 +28,14 @@ class ListaDespensa : AppCompatActivity() {
     private var listOption: Boolean = true
     private var detailOption: Boolean = false
     private lateinit var productos: MutableList<Producto>
+    private lateinit var productos_inicio: MutableList<Producto>
     private lateinit var adapterItems: ProductoListAdapter
 
     private lateinit var orderby : Button
     private lateinit var filter: Button;
+    private lateinit var reset: Button;
+    private lateinit var filtro:String
+    private lateinit var editText: EditText
     companion object {
         const val REQUEST_REGISTER = 1
     }
@@ -43,14 +48,18 @@ class ListaDespensa : AppCompatActivity() {
         listViewProductos = findViewById(R.id.listViewProducts)
         orderby = findViewById(R.id.orderby)
         filter = findViewById(R.id.filter)
+        reset = findViewById(R.id.reset)
+        editText = findViewById(R.id.filtertext)
+
+
 
         productos = mutableListOf(
-            Producto("Coca cola", "Santa Isabel", "1500", "2", "Bebiba"),
-            Producto("Pepsi", "Acuenta", "1500", "1", "Bebida"),
-            Producto("B", "B", "B", "B", "B"),
-            Producto("A", "A", "A", "A", "A")
+            Producto(0,"Coca cola", "Santa Isabel", "1500", "2", "Bebiba"),
+            Producto(1,"Pepsi", "Acuenta", "1500", "1", "Bebida"),
+
         )
 
+        productos_inicio = productos
         adapterItems = ProductoListAdapter(this, R.layout.card_view, productos)
         listViewProductos.adapter = adapterItems
 
@@ -72,9 +81,28 @@ class ListaDespensa : AppCompatActivity() {
             productos.sortBy { it.nombre }
             adapterItems = ProductoListAdapter(this, R.layout.card_view, productos)
             listViewProductos.adapter = adapterItems
-            //listViewProductos.adapter = adapterItems.sortedBy { it.nombre }
         }
 
+        filter.setOnClickListener{
+            filtro = editText.text.toString()
+            val productosEncontrados = filtrarProductosPorNombre(productos, filtro)
+
+            if (productosEncontrados.isNotEmpty()) {
+                println("Productos encontrados:")
+
+                adapterItems = ProductoListAdapter(this, R.layout.card_view, productosEncontrados)
+                listViewProductos.adapter = adapterItems
+            } else {
+                println("Productos no encontrados.")
+            }
+
+        }
+
+
+        reset.setOnClickListener{
+            adapterItems = ProductoListAdapter(this, R.layout.card_view, productos_inicio)
+            listViewProductos.adapter = adapterItems
+        }
 
     }
 
@@ -120,4 +148,7 @@ class ListaDespensa : AppCompatActivity() {
         return super.onOptionsItemSelected(item)
     }
 
+    fun filtrarProductosPorNombre(lista: MutableList<Producto>, nombre: String): List<Producto> {
+        return lista.filter { it.nombre == nombre }
+    }
 }

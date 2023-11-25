@@ -3,7 +3,13 @@ package com.example.despensa
 import android.os.Parcel
 import android.os.Parcelable
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+    @Entity
 data class Producto(
+                    @PrimaryKey(autoGenerate = true)
+                    val id: Long = 0,
                     val nombre: String?,
                     val tienda: String?,
                     val precio: String?,
@@ -12,6 +18,7 @@ data class Producto(
 ) : Parcelable {
 
     constructor(parcel: Parcel) : this(
+        parcel.readLong(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -20,6 +27,7 @@ data class Producto(
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeLong(id)
         parcel.writeString(nombre)
         parcel.writeString(tienda)
         parcel.writeString(precio)
