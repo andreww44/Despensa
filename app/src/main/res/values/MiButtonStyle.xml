@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MiButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- Color de fondo para el estado normal -->
+        <item name="android:colorButtonNormal">#FF91A4</item>
+
+
+    </style>
+</resources>

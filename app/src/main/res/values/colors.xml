@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorRojo">#FF0000</color>
+    <color name="colorVerde">#00FF00</color>
+    <color name="colorAzul">#0000FF</color>
+    <color name="colorAmarillo">#FFFF00</color>
+    <color name="colorCian">#00FFFF</color>
+    <color name="colorMagenta">#FF00FF</color>
+    <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorNegro">#000000</color>
+    <color name="colorGrisClaro">#CCCCCC</color>
+    <color name="colorGrisOscuro">#555555</color>
+    <color name="colorNaranja">#FFA500</color>
+    <color name="colorRosa">#FF69B4</color>
+    <color name="colorVioleta">#800080</color>
+    <color name="colorCeleste">#87CEEB</color>
+    <color name="colorVerdeLima">#32CD32</color>
+    <color name="colorGrisPlata">#C0C0C0</color>
+    <color name="colorDorado">#FFD700</color>
+    <color name="colorChocolate">#D2691E</color>
+    <color name="colorTurquesa">#40E0D0</color>
+    <color name="colorPurpura">#800080</color>
+    <color name="colorMarron">#A52A2A</color>
+    <color name="colorGrisAcero">#708090</color>
+    <color name="colorLavanda">#E6E6FA</color>
+    <color name="colorTeal">#008080</color>
+    <color name="colorCoral">#FF6F61</color>
+    <color name="colorPlata">#C0C0C0</color>
+    <color name="colorOroRosado">#FF91A4</color>
+    <color name="colorOroRosadoPalido">#F6B8CD</color>
+
+</resources>
