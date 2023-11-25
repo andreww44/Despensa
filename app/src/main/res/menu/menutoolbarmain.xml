@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/id_tienda"
+        android:title="Tiendas" />
+    <item
+        android:id="@+id/id_lista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Lista de compra" />
+    <item
+        android:id="@+id/id_invetario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Inventario" />
+    <item
+        android:id="@+id/id_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Mi Perfil" />
+    <item
+        android:id="@+id/id_salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Salir" />
+</menu>
