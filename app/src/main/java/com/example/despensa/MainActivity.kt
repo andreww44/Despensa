@@ -35,10 +35,6 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent);
                 return true;
             }
-            R.id.id_despensa-> {  val intent = Intent(this, DespensaCasaActivity::class.java)
-                startActivity(intent);
-                return true;
-            }
             R.id.id_perfil->{  val intent = Intent(this, MiPerfilActivity::class.java)
                 startActivity(intent);
                 return true;
