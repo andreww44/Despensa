@@ -1,5 +1,6 @@
 package com.example.despensa
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,6 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
 import android.widget.Toast
+import androidx.room.Room
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+
 
 class AddProduct : AppCompatActivity() {
 
@@ -42,6 +48,21 @@ class AddProduct : AppCompatActivity() {
             Toast.makeText(this,nameEdit.text, Toast.LENGTH_LONG).show()
             listTextos.add(nameEdit.text.toString())
             adapter.notifyDataSetChanged()
+
+            val nuevaProducto = Producto(
+                id = 1,
+                nombre = nameEdit.text.toString(),
+                tienda = storeEdit.text.toString(),
+                precio = precioEdit.text.toString(),
+                cantegoria = "cualquier",
+                cantidad = "2"
+                )
+            val context: Context = this
+            /*
+            GlobalScope.launch {
+                val productoDao = DatabaseProvider.obtenerProductoDatabase(context).productoDao()
+                productoDao.insertarTienda(nuevaProducto)
+            }*/
             nameEdit.setText("")
             precioEdit.setText("")
             storeEdit.setText("")
@@ -57,5 +78,21 @@ class AddProduct : AppCompatActivity() {
             finish();
         }
 
+    }
+}
+
+object DatabaseProvider {
+    private var tiendaDatabase: ProductDataBase? = null
+
+    fun obtenerProductoDatabase(context: Context): ProductDataBase {
+        return tiendaDatabase ?: synchronized(this) {
+            val instancia = Room.databaseBuilder(
+                context.applicationContext,
+                ProductDataBase::class.java,
+                "nombre_de_la_base_de_datos"
+            ).build()
+            tiendaDatabase = instancia
+            instancia
+        }
     }
 }
