@@ -56,6 +56,8 @@ class ListaDespensa : AppCompatActivity() {
         productos = mutableListOf(
             Producto(0,"Coca cola", "Santa Isabel", "1500", "2", "Bebiba"),
             Producto(1,"Pepsi", "Acuenta", "1500", "1", "Bebida"),
+            Producto(1,"Aceto", "Santa Isabel", "2500", "1", "Aceite"),
+            Producto(0,"Coca cola", "Santa Isabel", "1500", "2", "Bebiba"),
 
         )
 
