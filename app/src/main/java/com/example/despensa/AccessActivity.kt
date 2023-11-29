@@ -34,8 +34,7 @@ class AccessActivity : AppCompatActivity() {
 
         //val usuarioDao = Sign.database.usuarioDao()
 
-        val list : List<User> = db.userDao().getAll()
-        listUsers = list.toMutableList()
+
 
         loginButton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
@@ -62,12 +61,11 @@ class AccessActivity : AppCompatActivity() {
 
     private fun esValido(username: String, password: String): Boolean {
         //Preguntar si esta correcto
-        listUsers.forEach { elemento ->
-            if(elemento.username == username && elemento.password == password)
-            {
-                return true;
-            }
+        if("alvaro" == username && "1234" == password)
+        {
+            return true;
         }
+
         textPass.text = "Usuario No registrado"
         return false;
 

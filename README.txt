@@ -19,3 +19,6 @@ GitHub: https://github.com/andreww44/Despensa
 Video: https://youtu.be/CsUGGDwThzM
 Diagrama de clases: https://drive.google.com/file/d/17SQ6ASQjGzTWRj0nXdpkQkcRPnFjQ-cO/view?usp=sharing
 app: El Archivo Depensa.apk que se encuentra en la carpeta del github
+
+username = alvaro
+password = 1234
