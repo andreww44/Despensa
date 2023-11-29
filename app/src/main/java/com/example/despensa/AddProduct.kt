@@ -81,18 +81,3 @@ class AddProduct : AppCompatActivity() {
     }
 }
 
-object DatabaseProvider {
-    private var tiendaDatabase: ProductDataBase? = null
-
-    fun obtenerProductoDatabase(context: Context): ProductDataBase {
-        return tiendaDatabase ?: synchronized(this) {
-            val instancia = Room.databaseBuilder(
-                context.applicationContext,
-                ProductDataBase::class.java,
-                "nombre_de_la_base_de_datos"
-            ).build()
-            tiendaDatabase = instancia
-            instancia
-        }
-    }
-}

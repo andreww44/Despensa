@@ -12,7 +12,7 @@
         android:layout_width="358dp"
         android:layout_height="184dp"
         android:layout_marginStart="54dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
 
 
         android:layout_marginEnd="54dp"
@@ -21,7 +21,7 @@
         android:textSize="40sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
@@ -58,19 +58,19 @@
         android:layout_height="75dp"
         android:layout_marginStart="22dp"
         android:layout_marginEnd="22dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="108dp"
         android:text="Loggin"
         android:textColor="@color/colorNegro"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="141dp"
-        android:layout_height="128dp"
+        android:layout_width="135dp"
+        android:layout_height="73dp"
         android:layout_marginTop="60dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,4 +88,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonsign"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="362dp"
+        android:layout_height="69dp"
+        android:layout_marginBottom="40dp"
+        android:textColor="@color/colorNegro"
+        android:text="Signup"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/loginButton"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

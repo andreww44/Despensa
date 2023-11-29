@@ -18,13 +18,10 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(findViewById(R.id.toolbar2))
 
     }
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menutoolbarmain, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
             R.id.id_tienda-> {  val intent = Intent(this, ListaTienda::class.java)
@@ -46,7 +43,4 @@ class MainActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-
-
 }

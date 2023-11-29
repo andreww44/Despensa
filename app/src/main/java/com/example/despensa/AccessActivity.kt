@@ -6,13 +6,21 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.room.Room
+import com.example.despensa.database.AppDatabase
+import com.example.despensa.entity.User
 
 class AccessActivity : AppCompatActivity() {
     private lateinit var usernameEditText: EditText
     private lateinit var passwordEditText: EditText
+    private lateinit var listUsers : MutableList<User>
     private lateinit var loginButton: Button
+    private lateinit var signButton: Button
     private lateinit var textPass: TextView
+    private lateinit var db : AppDatabase
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,8 +29,13 @@ class AccessActivity : AppCompatActivity() {
         usernameEditText = findViewById(R.id.usernameEditText)
         passwordEditText = findViewById(R.id.passwordEditText)
         loginButton = findViewById(R.id.loginButton)
-
+        signButton = findViewById(R.id.buttonsign)
         textPass = findViewById(R.id.textView)
+
+        //val usuarioDao = Sign.database.usuarioDao()
+
+        val list : List<User> = db.userDao().getAll()
+        listUsers = list.toMutableList()
 
         loginButton.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View) {
@@ -38,15 +51,27 @@ class AccessActivity : AppCompatActivity() {
                 }
             }
         })
+
+        signButton.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View) {
+                val intent = Intent(applicationContext, SingActivity::class.java)
+                startActivity(intent)
+            }
+        })
     }
 
     private fun esValido(username: String, password: String): Boolean {
         //Preguntar si esta correcto
-        if(username == "alvaro" && password == "1234")
-        {
-            return true;
+        listUsers.forEach { elemento ->
+            if(elemento.username == username && elemento.password == password)
+            {
+                return true;
+            }
         }
+        textPass.text = "Usuario No registrado"
         return false;
 
     }
+
+
 }
